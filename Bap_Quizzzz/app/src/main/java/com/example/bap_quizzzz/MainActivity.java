@@ -67,13 +67,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
             case R.id.menuShare:
-                //String address = "cloneson1766@gmail.com";
+                String address = "cloneson1766@gmail.com";
                 String subject = "Góp ý";
-                Intent shareIntent = new Intent(Intent.ACTION_SENDTO);
-                //shareIntent.setType("text/plain");
+                Intent shareIntent = new Intent(Intent.ACTION_SENDTO);   //warning: SEND/SENDTO, chỉnh SEND thì phải cho dòng setType
+                //shareIntent.setType("text/plain");                              //build SEND xong co the doi thanh SENDTO !??
                 shareIntent.setData(Uri.parse("mailto:cloneson1766@gmail.com, vanbap20021599@gmail.com"));
+                //shareIntent.setData(Uri.parse("mailto:"));
                 //shareIntent.putExtra(Intent.EXTRA_EMAIL, address);
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+
 
                 //check co app gmail de mo khong
                 if(shareIntent.resolveActivity(getPackageManager()) != null){
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menuInfo:
                 replaceFragment(new InfoFragment());
-                Toast.makeText(this, "Ban chon Info", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Info", Toast.LENGTH_SHORT).show();
                 break;
 
         }
