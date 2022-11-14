@@ -14,12 +14,19 @@ public class Category {
 
     public static ArrayList<Category> list = new ArrayList<>(
             Arrays.asList(
-                    new Category("Dia ly", R.drawable.corn),
-                    new Category("Lich su", R.drawable.corn),
-                    new Category("Sinh hoc", R.drawable.corn),
-                    new Category("Am nhac", R.drawable.corn),
-                    new Category("My thuat", R.drawable.corn),
-                    new Category("Cong nghe", R.drawable.corn)
+                    new Category("Toán", R.drawable.math),
+                    new Category("Music", R.drawable.music),
+                    new Category("Công nghệ", R.drawable.technology),
+                    new Category("Điện ảnh", R.drawable.film),
+                    new Category("Game", R.drawable.game),
+                    new Category("Bóng đá", R.drawable.football),
+
+                    new Category("Kpop", R.drawable.kpop),
+                    new Category("Lịch sử", R.drawable.history),
+                    new Category("Sinh học", R.drawable.biology),
+                    new Category("Động vật", R.drawable.animal),
+                    new Category("Mỹ thuật", R.drawable.art),
+                    new Category("Địa lý", R.drawable.geography)
 
             )
     );

@@ -19,7 +19,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //Category List (Son 14/11)
+        //Category List (Son + Van 14/11)
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.categoryList.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.categoryList.setAdapter(new CategoryAdapter(Category.list));
