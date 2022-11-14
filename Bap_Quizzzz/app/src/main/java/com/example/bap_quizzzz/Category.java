@@ -14,7 +14,7 @@ public class Category {
 
     public static ArrayList<Category> list = new ArrayList<>(
             Arrays.asList(
-                    new Category("Toán", R.drawable.math),
+                    new Category("Toán học", R.drawable.math),
                     new Category("Music", R.drawable.music),
                     new Category("Công nghệ", R.drawable.technology),
                     new Category("Điện ảnh", R.drawable.film),
