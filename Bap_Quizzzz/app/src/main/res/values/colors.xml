@@ -18,4 +18,13 @@
 
     <color name="light_grey">#ECECEC</color>
     <color name="brown">#875203</color>
+
+    <color name="xanhlacay">#4CAF50</color>
+    <color name="xanhlacay_dam">#3AB13F</color>
+
+    <color name="cam">#FF9800</color>
+    <color name="cam_dam">#FF6F22</color>
+
+    <color name="maudo">#F44336</color>
+    <color name="maudo_dam">#F12F21</color>
 </resources>

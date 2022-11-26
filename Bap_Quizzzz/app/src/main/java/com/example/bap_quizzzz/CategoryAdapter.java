@@ -4,10 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bap_quizzzz.databinding.ListItemBinding;
@@ -20,7 +24,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     public CategoryAdapter(ArrayList<Category> list){
         this.list = list;
-
     }
 
     @NonNull
@@ -38,7 +41,20 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         Category item = list.get(position);
         //holder -> ViewHolder can du lieu
         holder.bind(item);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), list.get(holder.getAdapterPosition()).getCategoryName(), Toast.LENGTH_SHORT).show();
+
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                LevelFragment levelFragment = new LevelFragment();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, levelFragment).addToBackStack(null).commit();
+            }
+        });
     }
+
+
+
 
     @Override
     public int getItemCount() {
@@ -52,20 +68,18 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             this.binding = binding;
         }
 
-        //Gan gia tri cho cac View cua Item
-        ImageView imageView;
-        TextView textView;
 
-        //dung binding
+        //dung binding truy cap cac id cua category
         public void bind(Category item){
             binding.nameCategory.setText(item.getCategoryName());
             binding.imageCategory.setImageResource(item.getCategoryImage());
+            /*binding.getRoot().setOnClickListener(view -> {
+                //Navigation component
+                Toast.makeText(view.getContext(), "ALOALO", Toast.LENGTH_SHORT).show();
+            });*/
+
         }
 
-        /*public CategoryViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imageView = itemView.findViewById(R.id.imageCategory);
-            textView = itemView.findViewById((R.id.nameCategory));
-        }*/
     }
+
 }

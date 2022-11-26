@@ -6,30 +6,42 @@ import java.util.Arrays;
 public class Category {
     private String categoryName;
     private int categoryImage;
+    private int categoryID;
 
-    public Category(String categoryName, int categoryImage) {
+    public Category() {
+    }
+
+    public Category(String categoryName, int categoryImage, int categoryID) {
         this.categoryName = categoryName;
         this.categoryImage = categoryImage;
+        this.categoryID = categoryID;
     }
 
     public static ArrayList<Category> list = new ArrayList<>(
             Arrays.asList(
-                    new Category("Toán học", R.drawable.math),
-                    new Category("Music", R.drawable.music),
-                    new Category("Công nghệ", R.drawable.technology),
-                    new Category("Điện ảnh", R.drawable.film),
-                    new Category("Game", R.drawable.game),
-                    new Category("Bóng đá", R.drawable.football),
+                    new Category("Toán học", R.drawable.math, 0),
+                    new Category("Music", R.drawable.music,1),
+                    new Category("Công nghệ", R.drawable.technology,2),
+                    new Category("Điện ảnh", R.drawable.film,3),
+                    new Category("Game", R.drawable.game,4),
+                    new Category("Bóng đá", R.drawable.football,5),
 
-                    new Category("Kpop", R.drawable.kpop),
-                    new Category("Lịch sử", R.drawable.history),
-                    new Category("Sinh học", R.drawable.biology),
-                    new Category("Động vật", R.drawable.animal),
-                    new Category("Mỹ thuật", R.drawable.art),
-                    new Category("Địa lý", R.drawable.geography)
+                    new Category("Kpop", R.drawable.kpop,6),
+                    new Category("Lịch sử", R.drawable.history,7),
+                    new Category("Sinh học", R.drawable.biology,8),
+                    new Category("Động vật", R.drawable.animal,9),
+                    new Category("Mỹ thuật", R.drawable.art,10),
+                    new Category("Địa lý", R.drawable.geography,11)
 
             )
     );
+    public int getCategoryID() {
+        return categoryID;
+    }
+
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
 
     public String getCategoryName() {
         return categoryName;
