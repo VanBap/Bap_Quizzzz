@@ -1,6 +1,7 @@
 package com.example.bap_quizzzz;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bap_quizzzz.databinding.ListItemBinding;
@@ -45,10 +47,20 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), list.get(holder.getAdapterPosition()).getCategoryName(), Toast.LENGTH_SHORT).show();
+                //pass object
+                Bundle args = new Bundle();
+                args.putSerializable("object_item", item);
 
+                //dung replace fragment
                 AppCompatActivity activity = (AppCompatActivity)view.getContext();
                 LevelFragment levelFragment = new LevelFragment();
+                levelFragment.setArguments(args);
+
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, levelFragment).addToBackStack(null).commit();
+
+
+                //dung navigation component
+                //Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_levelFragment);
             }
         });
     }

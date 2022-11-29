@@ -9,11 +9,15 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.bap_quizzzz.databinding.ActivityMainBinding;
+import com.example.bap_quizzzz.databinding.FragmentLevelBinding;
 
 import java.util.ArrayList;
 
@@ -95,6 +99,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

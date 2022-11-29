@@ -1,9 +1,10 @@
 package com.example.bap_quizzzz;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Category {
+public class Category implements Serializable {
     private String categoryName;
     private int categoryImage;
     private int categoryID;
