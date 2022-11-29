@@ -9,11 +9,17 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.bap_quizzzz.databinding.ActivityMainBinding;
+import com.example.bap_quizzzz.databinding.FragmentLevelBinding;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     /// Bottom navigation + Fragment (Van 9/11/2022)
@@ -40,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
         //
+
     }
 
     // Bottom navigation + Fragment (Van 9/11/2022)
-    private void replaceFragment(Fragment fragment) {
+    public void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
@@ -67,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
             case R.id.menuShare:
-                String address = "cloneson1766@gmail.com";
+
                 String subject = "Góp ý";
-                Intent shareIntent = new Intent(Intent.ACTION_SENDTO);   //warning: SEND/SENDTO, chỉnh SEND thì phải cho dòng setType
-                //shareIntent.setType("text/plain");                              //build SEND xong co the doi thanh SENDTO !??
-                shareIntent.setData(Uri.parse("mailto:cloneson1766@gmail.com, vanbap20021599@gmail.com"));
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                //shareIntent.setData(Uri.parse("mailto:cloneson1766@gmail.com, vanbap20021599@gmail.com"));
                 //shareIntent.setData(Uri.parse("mailto:"));
-                //shareIntent.putExtra(Intent.EXTRA_EMAIL, address);
+                shareIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"cloneson1766@gmail.com","vanbap20021599@gmail.com"});
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
 
 
@@ -92,7 +99,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    //
-
-
 }

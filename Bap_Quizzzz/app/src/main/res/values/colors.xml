@@ -12,4 +12,19 @@
     <color name="colorPrimaryDark">#6539ba</color>
     <color name="colorAccent">#FF4081</color>
     <color name="bgBottomNavigation">#fe485a</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="dark_yellow">#FFC107</color>
+    <color name="darker_yellow">#FF9800</color>
+
+    <color name="light_grey">#ECECEC</color>
+    <color name="brown">#875203</color>
+
+    <color name="xanhlacay">#40CA46</color>
+    <color name="xanhlacay_dam">#54E65A</color>
+
+    <color name="blue">#03A9F4</color>
+    <color name="blue_nhat">#50C4F8</color>
+
+    <color name="maudo">#F44336</color>
+    <color name="maudo_dam">#F12F21</color>
 </resources>
