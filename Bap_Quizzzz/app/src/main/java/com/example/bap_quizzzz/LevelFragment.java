@@ -55,7 +55,7 @@ public class LevelFragment extends Fragment {
         Bundle args = getArguments();
         Category item = (Category) args.getSerializable("object_item");
         binding.catName.setText(item.getCategoryName());
-        binding.catID.setText(String.valueOf(item.getCategoryID()));
+        //binding.catID.setText(String.valueOf(item.getCategoryID()));
 
 
 
