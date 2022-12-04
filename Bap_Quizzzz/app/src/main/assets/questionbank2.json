@@ -1,0 +1,140 @@
+{
+   "math":{
+      "easy":[
+         {
+            "question":"Cau hoi toan de 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi toan de 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Cau hoi toan de 3",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "medium":[
+         {
+            "question":"Cau hoi toan TB 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi toan TB 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "hard":[
+         {
+            "question":"Cau hoi toan hard 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi toan hard 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ]
+   },
+   "music":{
+      "easy":[
+         {
+            "question":"Cau hoi music de 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi msuic de 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "medium":[
+         {
+            "question":"Cau hoi music TB 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi music TB 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "hard":[
+         {
+            "question":"Cau hoi music hard 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi music hard 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ]
+   },
+   "CongNghe":{
+      "easy":[
+         {
+            "question":"Cau hoi cong nghe de 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi cong nghe de 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "medium":[
+         {
+            "question":"Cau hoi cong nghe TB 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi cong nghe TB 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "hard":[
+         {
+            "question":"Cau hoi cong nghe hard 1",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Cau hoi cong nghe hard 2",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ]
+   }
+}
