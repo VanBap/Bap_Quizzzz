@@ -40,32 +40,6 @@ public class QuestionFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentQuestionBinding.inflate(inflater,container,false);
 
-        try {
-            loadQuestion(HistoryFragment.getTopic(), HistoryFragment.getLevel());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        DisplayQuestion(currentQuestionCount);
-
-        binding.answerTrueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(currentQuestionCount < questionItems.size()-1){
-                    currentQuestionCount++;
-                    DisplayQuestion(currentQuestionCount);
-                }
-            }
-        });
-
-        binding.answerFalseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(currentQuestionCount < questionItems.size()-1){
-                    currentQuestionCount++;
-                    DisplayQuestion(currentQuestionCount);
-                }
-            }
-        });
 
         //get all questions
         try {
