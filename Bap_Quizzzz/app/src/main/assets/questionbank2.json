@@ -2,19 +2,43 @@
    "math":{
       "easy":[
          {
-            "question":"Cau hoi toan de 1",
+            "question":"1 + 1 = 2",
             "answer1":"Dung",
             "answer2":"Sai",
             "correct":"Dung"
          },
          {
-            "question":"Cau hoi toan de 2",
+            "question":"2 + 5 = 1",
             "answer1":"Dung",
             "answer2":"Sai",
             "correct":"Sai"
          },
          {
-            "question":"Cau hoi toan de 3",
+            "question":"2 + 2 = 4",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"3 + 3 = 6",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"1 + 3 = 5",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"10 + 10 = 20",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"5 + 5 = 12",
             "answer1":"Dung",
             "answer2":"Sai",
             "correct":"Sai"

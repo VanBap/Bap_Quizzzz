@@ -4,13 +4,14 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-import com.example.bap_quizzzz.databinding.FragmentLevelBinding;
 import com.example.bap_quizzzz.databinding.FragmentQuestionBinding;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -22,6 +23,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class QuestionFragment extends Fragment {
@@ -55,19 +58,41 @@ public class QuestionFragment extends Fragment {
         //updateQuestionText();
         //binding.questionTextView.setText(questionItems.get(0).getQuestionText());
 
+
+        //get all questions
         try {
             loadQuestion(HistoryFragment.getTopic(), HistoryFragment.getLevel());
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        //shuffle (random) the questions
+        Collections.shuffle(questionItems);
+
+        //load first question
         DisplayQuestion(currentQuestionCount);
 
+        //Chon dap an xong next cau hoi
         binding.answerTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(currentQuestionCount < questionItems.size()-1){
+                //check correct answer
+                if(questionItems.get(currentQuestionCount).getAnswer1().
+                        equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
+                    HistoryFragment.increaseCorrectCount();
+                }
+
+                //load next question neu co
+                if(currentQuestionCount < 4){  // 4: chi chon 5 cau hoi
                     currentQuestionCount++;
                     DisplayQuestion(currentQuestionCount);
+                }else{
+                    //end game. show result
+                    Toast.makeText(getContext(), String.valueOf(HistoryFragment.getCorrectCount()), Toast.LENGTH_SHORT).show();
+
+                    //go to result Fragment
+                    ResultFragment resultFragment = new ResultFragment();
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, resultFragment).addToBackStack(null).commit();
                 }
             }
         });
@@ -75,9 +100,22 @@ public class QuestionFragment extends Fragment {
         binding.answerFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(currentQuestionCount < questionItems.size()-1){
+                //check correct answer
+                if(questionItems.get(currentQuestionCount).getAnswer2().
+                        equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
+                    HistoryFragment.increaseCorrectCount();
+                }
+
+                //load next question neu co
+                if(currentQuestionCount < 4){
                     currentQuestionCount++;
                     DisplayQuestion(currentQuestionCount);
+                }else{
+                    //end game. show result
+                    Toast.makeText(getContext(), String.valueOf(HistoryFragment.getCorrectCount()), Toast.LENGTH_SHORT).show();
+                    //go to result Fragment
+                    ResultFragment resultFragment = new ResultFragment();
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, resultFragment).addToBackStack(null).commit();
                 }
             }
         });

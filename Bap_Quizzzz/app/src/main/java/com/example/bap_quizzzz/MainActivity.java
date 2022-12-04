@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void chooseLevel(View view) throws JSONException{
+    public void chooseLevel(View view){
         switch (view.getId()){
             case R.id.easybtn:
                 HistoryFragment.setLevel("easy");
@@ -123,8 +123,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-
-
         /*QuestionFragment.loadAllQuestion(HistoryFragment.getLevel());
         Fragment questionFragment = new QuestionFragment();
         replaceFragment(questionFragment);*/
@@ -134,5 +132,6 @@ public class MainActivity extends AppCompatActivity {
             HistoryFragment.setTopic("math");
         }
     }*/
+
 
 }

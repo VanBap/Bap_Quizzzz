@@ -32,6 +32,14 @@ public class HistoryFragment extends Fragment {
         return current.level;
     }
 
+    //luu so cau tra loi dung
+    public static void increaseCorrectCount(){
+        current.correctCount = current.correctCount + 1;
+    }
+    public static int getCorrectCount(){
+        return current.correctCount;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
