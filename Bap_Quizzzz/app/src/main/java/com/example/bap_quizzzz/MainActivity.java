@@ -14,16 +14,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.bap_quizzzz.databinding.ActivityMainBinding;
 import com.example.bap_quizzzz.databinding.FragmentLevelBinding;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     /// Bottom navigation + Fragment (Van 9/11/2022)
     ActivityMainBinding binding;
+    //CategoryAdapter.CategoryViewHolder categoryViewHolder;
     //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.addToBackStack(null).commit();
     }
     //
 
@@ -99,4 +103,36 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void chooseLevel(View view) throws JSONException{
+        switch (view.getId()){
+            case R.id.easybtn:
+                HistoryFragment.setLevel("easy");
+                QuestionFragment easyQuestionFragment = new QuestionFragment();
+                replaceFragment(easyQuestionFragment);
+                break;
+            case R.id.mediumbtn:
+                HistoryFragment.setLevel("medium");
+                QuestionFragment mediumQuestionFragment = new QuestionFragment();
+                replaceFragment(mediumQuestionFragment);
+                break;
+            case R.id.hardbtn:
+                HistoryFragment.setLevel("hard");
+                QuestionFragment hardQuestionFragment = new QuestionFragment();
+                replaceFragment(hardQuestionFragment);
+                break;
+        }
+
+
+
+        /*QuestionFragment.loadAllQuestion(HistoryFragment.getLevel());
+        Fragment questionFragment = new QuestionFragment();
+        replaceFragment(questionFragment);*/
+    }
+    /*public void chooseTopic(){
+        if(categoryViewHolder.getAdapterPosition() == 0){
+            HistoryFragment.setTopic("math");
+        }
+    }*/
+
 }

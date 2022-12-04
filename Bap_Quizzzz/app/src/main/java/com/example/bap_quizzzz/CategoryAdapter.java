@@ -47,6 +47,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), list.get(holder.getAdapterPosition()).getCategoryName(), Toast.LENGTH_SHORT).show();
+                if(holder.getAdapterPosition()==0){
+                    HistoryFragment.setTopic("math");
+                }else if(holder.getAdapterPosition() == 1){
+                    HistoryFragment.setTopic("music");
+                }else if(holder.getAdapterPosition() == 2){
+                    HistoryFragment.setTopic("CongNghe");
+                }
                 //pass object
                 Bundle args = new Bundle();
                 args.putSerializable("object_item", item);
@@ -54,6 +61,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                 //dung replace fragment
                 AppCompatActivity activity = (AppCompatActivity)view.getContext();
                 LevelFragment levelFragment = new LevelFragment();
+                //set bundle
                 levelFragment.setArguments(args);
 
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, levelFragment).addToBackStack(null).commit();

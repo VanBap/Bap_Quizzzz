@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.bap_quizzzz.databinding.FragmentHomeBinding;
 
+import java.util.ArrayList;
+
 
 public class HomeFragment extends Fragment{
     FragmentHomeBinding binding;
@@ -29,6 +31,7 @@ public class HomeFragment extends Fragment{
         /*binding.homebtn.setOnClickListener(view -> {
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_testFragment2);
         });*/
+
         return binding.getRoot();
     }
 }
