@@ -31,13 +31,6 @@ public class QuestionFragment extends Fragment {
 
     FragmentQuestionBinding binding;
 
-
-    /*private void updateQuestionText() {
-        Bundle args = getArguments();
-        Question ques = (Question) args.getSerializable("object_question");
-        binding.questionTextView.setText(ques.getQuestionText());
-    }*/
-
     List<Question> questionItems;
     int currentQuestionCount = 0;
 
@@ -47,17 +40,32 @@ public class QuestionFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentQuestionBinding.inflate(inflater,container,false);
 
-        /*Bundle args = getArguments();
-        List<Question> ques = new ArrayList<>(Arrays.asList((Question) args.getSerializable("object_question")));
-        binding.questionTextView.setText(ques.get(0).getQuestionText());*/
+        try {
+            loadQuestion(HistoryFragment.getTopic(), HistoryFragment.getLevel());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        DisplayQuestion(currentQuestionCount);
 
-        /*Bundle args = getArguments();
-        Question ques = (Question) args.getSerializable("object_question");
-        //binding.questionTextView.setText(math.get(questionIndex).getQuestionText());
-        binding.questionTextView.setText(ques.getQuestionText());*/
-        //updateQuestionText();
-        //binding.questionTextView.setText(questionItems.get(0).getQuestionText());
+        binding.answerTrueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(currentQuestionCount < questionItems.size()-1){
+                    currentQuestionCount++;
+                    DisplayQuestion(currentQuestionCount);
+                }
+            }
+        });
 
+        binding.answerFalseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(currentQuestionCount < questionItems.size()-1){
+                    currentQuestionCount++;
+                    DisplayQuestion(currentQuestionCount);
+                }
+            }
+        });
 
         //get all questions
         try {
@@ -173,7 +181,6 @@ public class QuestionFragment extends Fragment {
         }
 
     }
-
 
     private void DisplayQuestion(int number){
         binding.questionTextView.setText(questionItems.get(number).getQuestionText());
