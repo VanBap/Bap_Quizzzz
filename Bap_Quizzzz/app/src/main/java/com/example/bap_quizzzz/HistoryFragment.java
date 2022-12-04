@@ -40,6 +40,10 @@ public class HistoryFragment extends Fragment {
         return current.correctCount;
     }
 
+    //reset so cau tra loi dung ve 0
+    public static void resetCorrectCount(){
+        current.correctCount = 0;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

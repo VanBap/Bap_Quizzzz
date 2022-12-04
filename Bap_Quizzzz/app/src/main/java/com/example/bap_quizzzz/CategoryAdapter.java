@@ -67,7 +67,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                 //set bundle
                 levelFragment.setArguments(args);
 
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, levelFragment).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, levelFragment).addToBackStack(null).commit();
 
             }
         });
@@ -93,10 +93,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         public void bind(Category item){
             binding.nameCategory.setText(item.getCategoryName());
             binding.imageCategory.setImageResource(item.getCategoryImage());
-            /*binding.getRoot().setOnClickListener(view -> {
-                //Navigation component
-                Toast.makeText(view.getContext(), "ALOALO", Toast.LENGTH_SHORT).show();
-            });*/
+
 
         }
 

@@ -104,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    //Chon level
     public void chooseLevel(View view){
         switch (view.getId()){
             case R.id.easybtn:
@@ -122,16 +124,31 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(hardQuestionFragment);
                 break;
         }
-
-        /*QuestionFragment.loadAllQuestion(HistoryFragment.getLevel());
-        Fragment questionFragment = new QuestionFragment();
-        replaceFragment(questionFragment);*/
     }
-    /*public void chooseTopic(){
-        if(categoryViewHolder.getAdapterPosition() == 0){
-            HistoryFragment.setTopic("math");
+
+    //tro ve home
+    public void goHome(View view){
+        if(view.getId() == R.id.go_home){
+            HomeFragment goHomeFragment = new HomeFragment();
+            replaceFragment(goHomeFragment);
         }
-    }*/
+        //reset so cau tra loi dung ve 0
+        HistoryFragment.resetCorrectCount();
+    }
+
+    //chia se thanh tich
+    public void shareResult(View view) {
+        if(view.getId() == R.id.share_result){
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            String result = "Tôi đã trả lời đúng " + (HistoryFragment.getCorrectCount() + "/5") + " câu hỏi " + "cấp độ " + HistoryFragment.getLevel() + " ở chủ đề " + HistoryFragment.getTopic();
+            Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+            shareIntent.putExtra(Intent.EXTRA_TEXT, result);
+            startActivity(Intent.createChooser(shareIntent, null));
+
+        }
+    }
+
 
 
 }

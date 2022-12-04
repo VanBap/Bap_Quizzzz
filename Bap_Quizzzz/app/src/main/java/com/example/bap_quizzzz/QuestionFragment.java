@@ -59,8 +59,7 @@ public class QuestionFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //check correct answer
-                if(questionItems.get(currentQuestionCount).getAnswer1().
-                        equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
+                if(questionItems.get(currentQuestionCount).getAnswer1().equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
                     HistoryFragment.increaseCorrectCount();
                 }
 
@@ -83,8 +82,7 @@ public class QuestionFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //check correct answer
-                if(questionItems.get(currentQuestionCount).getAnswer2().
-                        equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
+                if(questionItems.get(currentQuestionCount).getAnswer2().equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
                     HistoryFragment.increaseCorrectCount();
                 }
 
