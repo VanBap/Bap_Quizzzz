@@ -3,4 +3,4 @@ Project cuối kì môn "Lập trình cho thiết bị di động" của 2 sinh 
  Quá trình update được ghi lại qua các branch
  
 Update tính năng: Chọn câu hỏi
- 
+ Update 4/12
