@@ -21,9 +21,10 @@ public class Category implements Serializable {
     public static ArrayList<Category> list = new ArrayList<>(
             Arrays.asList(
                     new Category("Toán học", R.drawable.math, 0),
-                    new Category("Music", R.drawable.music,1),
+                    new Category("Điện ảnh", R.drawable.film,1),
                     new Category("Công nghệ", R.drawable.technology,2),
-                    new Category("Điện ảnh", R.drawable.film,3),
+
+                    new Category("Music", R.drawable.music,3),
                     new Category("Game", R.drawable.game,4),
                     new Category("Bóng đá", R.drawable.football,5),
 

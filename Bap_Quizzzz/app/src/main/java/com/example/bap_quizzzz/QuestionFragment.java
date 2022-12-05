@@ -163,10 +163,23 @@ public class QuestionFragment extends Fragment {
         updateQuesQuantity();
     }
 
+    //PROGRESS BAR
     //update cau hoi hien tai/tong so cau hoi
+    int vandeptrai = 0;
     private void updateQuesQuantity(){
         int progress = binding.quesProgess.getProgress();
-        binding.quesProgess.setProgress(progress + 20);
+        if (vandeptrai == 0)
+        {
+            progress = 0;
+            vandeptrai +=1;
+        }
+        else if (progress >= binding.quesProgess.getMax())
+        {
+            vandeptrai = 0;
+        }
+        else {
+            binding.quesProgess.setProgress(progress + 20);
+        }
     }
 
 

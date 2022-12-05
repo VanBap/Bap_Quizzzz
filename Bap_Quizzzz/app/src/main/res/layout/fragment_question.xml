@@ -56,11 +56,13 @@
     <TextView
         android:id="@+id/question_text_view"
         style="@style/TextAppearance.MaterialComponents.Headline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="231dp"
+        android:layout_height="180dp"
+        android:width="250dp"
         android:fontFamily="@font/baloo"
+        android:gravity="center"
         android:paddingHorizontal="16dp"
-        android:textAlignment="center"
+
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/view2"
@@ -85,7 +87,7 @@
         android:id="@+id/answer_true_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="228dp"
         android:background="@drawable/button_true"
         android:drawableLeft="@drawable/checked"
         android:drawablePadding="5dp"
@@ -97,7 +99,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.592" />
 
     <Button
         android:id="@+id/answer_false_button"
@@ -114,20 +116,20 @@
         app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.592" />
 
     <ProgressBar
         android:id="@+id/ques_progess"
         style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="100dp"
         android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

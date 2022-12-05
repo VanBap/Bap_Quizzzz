@@ -52,7 +52,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                 if(holder.getAdapterPosition()==0){
                     HistoryFragment.setTopic("math");
                 }else if(holder.getAdapterPosition() == 1){
-                    HistoryFragment.setTopic("music");
+                    HistoryFragment.setTopic("film");
                 }else if(holder.getAdapterPosition() == 2){
                     HistoryFragment.setTopic("CongNghe");
                 }
