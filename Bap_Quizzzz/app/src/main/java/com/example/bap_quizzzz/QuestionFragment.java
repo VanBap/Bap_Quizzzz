@@ -34,6 +34,8 @@ public class QuestionFragment extends Fragment {
     List<Question> questionItems;
     int currentQuestionCount = 0;
 
+    //final int question_progress = (int) Math.ceil(100/questionItems.size());
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,9 +70,6 @@ public class QuestionFragment extends Fragment {
                     currentQuestionCount++;
                     DisplayQuestion(currentQuestionCount);
                 }else{
-                    //end game. show result
-                    Toast.makeText(getContext(), String.valueOf(HistoryFragment.getCorrectCount()), Toast.LENGTH_SHORT).show();
-
                     //go to result Fragment
                     ResultFragment resultFragment = new ResultFragment();
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, resultFragment).addToBackStack(null).commit();
@@ -91,8 +90,6 @@ public class QuestionFragment extends Fragment {
                     currentQuestionCount++;
                     DisplayQuestion(currentQuestionCount);
                 }else{
-                    //end game. show result
-                    Toast.makeText(getContext(), String.valueOf(HistoryFragment.getCorrectCount()), Toast.LENGTH_SHORT).show();
                     //go to result Fragment
                     ResultFragment resultFragment = new ResultFragment();
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, resultFragment).addToBackStack(null).commit();
@@ -154,8 +151,16 @@ public class QuestionFragment extends Fragment {
 
     }
 
+    //hien thi cau hoi
     private void DisplayQuestion(int number){
         binding.questionTextView.setText(questionItems.get(number).getQuestionText());
+        updateQuesQuantity();
+    }
+
+    //update cau hoi hien tai/tong so cau hoi
+    private void updateQuesQuantity(){
+        int progress = binding.quesProgess.getProgress();
+        binding.quesProgess.setProgress(progress + 20);
     }
 
 }
