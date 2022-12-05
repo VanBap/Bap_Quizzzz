@@ -10,8 +10,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.example.bap_quizzzz.databinding.FragmentQuestionBinding;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -60,6 +63,9 @@ public class QuestionFragment extends Fragment {
         binding.answerTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // HIEU UNG KHI BUTTON DUOC CLICK
+                // YoYo.with(Techniques.RubberBand).duration(1000).repeat(1).playOn(binding.imageView9);
+
                 //check correct answer
                 if(questionItems.get(currentQuestionCount).getAnswer1().equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
                     HistoryFragment.increaseCorrectCount();
@@ -162,5 +168,8 @@ public class QuestionFragment extends Fragment {
         int progress = binding.quesProgess.getProgress();
         binding.quesProgess.setProgress(progress + 20);
     }
+
+
+
 
 }

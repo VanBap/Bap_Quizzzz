@@ -17,7 +17,7 @@
     <color name="darker_yellow">#FF9800</color>
 
     <color name="light_grey">#ECECEC</color>
-    <color name="brown">#875203</color>
+    <color name="brown">#653E02</color>
 
     <color name="xanhlacay">#40CA46</color>
     <color name="xanhlacay_dam">#54E65A</color>
@@ -27,4 +27,9 @@
 
     <color name="maudo">#F44336</color>
     <color name="maudo_dam">#F12F21</color>
+
+    <color name="green_board1">#296E01</color>
+    <color name="green_board2">#338a01</color>
+    <color name="green_board3">#296E01</color>
+
 </resources>
