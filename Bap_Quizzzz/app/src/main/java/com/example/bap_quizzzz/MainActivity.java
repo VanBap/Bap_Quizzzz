@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.history:
                     replaceFragment(new HistoryFragment());
+                    //reset so cau tra loi dung ve 0
+                    HistoryFragment.resetCorrectCount();
                     break;
             }
             return true;
@@ -133,7 +135,12 @@ public class MainActivity extends AppCompatActivity {
             replaceFragment(goHomeFragment);
         }
         //reset so cau tra loi dung ve 0
+        HistoryFragment.AddHistoryList();
+
+        //history result
+        HistoryFragment.getCorrectCount();
         HistoryFragment.resetCorrectCount();
+
     }
 
     //chia se thanh tich
