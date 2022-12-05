@@ -1,0 +1,296 @@
+{
+   "math":{
+      "easy":[
+         {
+            "question":"Pytago là nhà toán học người Hy Lạp ? ",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Tổng 3 góc của 1 tam giác luôn bằng 180 độ ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Hình thang là hình có 2 đường chéo song song nhau ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Logarit cơ số -1 bằng 0 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Làm tròn 3.197654 đến chữ số thập phân thứ 3 là 3.197 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "medium":[
+         {
+            "question":"Tìm y, biết y * 5 = 45. Vậy y = 8",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Có 40 học sinh, 1/5 số học sinh này là: 7",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Khi viết tổng 4+4+4 thành phép nhân thì hai thừa số lần lượt là: 5 và 4",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Kết quả của: 40 – 7 x 5 = 165 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Kết quả của: 20 : 4 + 1 = 7 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         }
+      ],
+      "hard":[
+         {
+            "question":"Issac Newton nổi tiếng nhờ phát minh ra calculus vào cuối thế kỷ 1660 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Euclid là cha đẻ của giải tích ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Giáo sư Ngô Bảo Châu đạt giải thưởng toán học Fields vào năm 2010 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Carl Friedrich Gauss là nhà toán học người nước Pháp ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Georg Cantor là nhà toán học người Nga sáng tạo ra số cardinal ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         }
+      ]
+   },
+   "film":{
+      "easy":[
+         {
+            "question":"Sự im lặng của bầy cừu 1991 là bộ phim được chuyển thể từ tiểu thuyết cùng tên ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Diễn viên Tom Hanks sinh vào năm 1955",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"“Catch me if you can” là bộ phim duy nhất có sự hợp tác giữa Dicaprio và Tom hanks?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Leonardo DiCaprio đã đạt 3 giải Oscar nam diễn viên xuất sắc nhất cho đến năm 2022 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Christopher Nolan là đạo diên của phim “Instertella”",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         }
+      ],
+      "medium":[
+         {
+            "question":"Giải thưởng Viện Hàn lâm (Oscar) lần đầu tiên được trao vào năm 1928 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Bộ phim titanic đã giành được 13 giải Oscar ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"“Cha đẻ” của chuột Mickey đã đoạt tổng cộng 22 giải Oscar trong suốt sự nghiệp của mình ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"“Forrest Gump” lần đầu ra mắt khán giả vào năm 1995 ? ",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Bộ phim “Shawshank Redemption” là bộ phim đạt điểm Imdb cao nhất mọi thơi đại ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         }
+      ],
+      "hard":[
+         {
+            "question":"Kathryn Bigelow  là người phụ nữ đầu tiên nhận giải Oscar danh cho “ Đạo diễn xuất sắc nhất”",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Giải Oscar cho nữ diễn viên chính xuất sắc nhất lần đầu được trao vào năm 1926 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"HelpBurn giành nhiều chiến thắng nhất ở hạng mục “ Nữ diễn viên chính xuất sắc” tại Oscar ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Bộ phim “La La Land” là bộ phim về thể loại nhạc kịch ? ",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Emma Stone đã nhận giải Oscar qua bộ phim “La La Land” ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         }
+      ]
+   },
+   "CongNghe":{
+      "easy":[
+         {
+            "question":"Internet được ra đời vào năm 1969 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Việt nam hòa mạng Internet vào năm 1997 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Email được tạo ra bởi Ray Tomlinson vào năm 1972 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Giao thức TCP/IP được tất cả máy tính sử udngj trên mạng ARPANET vào năm 1983 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Internet bùng nổ với sự xuất hiện của World Wide Web ( WWW) vào năm 1999 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         }
+      ],
+      "medium":[
+         {
+            "question":"Việt nam triển khai thử nghiệm có giới hạn khu vực mạng 4G vào năm 2014 ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"4G được hiểu là tiêu chuẩn tương lai của các thiết bị không dây ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Mạng 4G hiện hoạt động trên băng tần LTE ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Dòng cận 4G gồm: LTE, WIMAX được gọi là tiền 4G ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"LTE chính là 4G",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         }
+      ],
+      "hard":[
+         {
+            "question":"Mạng 5G có tốc độ nhanh hơn khoảng 10 lần mạng 4G hiện nay ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"5G hoạt động ở các băng tần 28, 38, và 60Hz ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Sai"
+         },
+         {
+            "question":"Theo lý thuyết tốc độ 5G có thể đạt đến 10Gbp/s",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"Mạng 5G không thể đi xuyên qua tường, mái nhà ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         },
+         {
+            "question":"5G có thể kết hợp cùng với Internet of Things (IoT) ?",
+            "answer1":"Dung",
+            "answer2":"Sai",
+            "correct":"Dung"
+         }
+      ]
+   }
+}

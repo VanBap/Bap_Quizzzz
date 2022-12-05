@@ -47,6 +47,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), list.get(holder.getAdapterPosition()).getCategoryName(), Toast.LENGTH_SHORT).show();
+
+                //set topic
+                if(holder.getAdapterPosition()==0){
+                    HistoryFragment.setTopic("math");
+                }else if(holder.getAdapterPosition() == 1){
+                    HistoryFragment.setTopic("film");
+                }else if(holder.getAdapterPosition() == 2){
+                    HistoryFragment.setTopic("CongNghe");
+                }
+
                 //pass object
                 Bundle args = new Bundle();
                 args.putSerializable("object_item", item);
@@ -54,13 +64,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                 //dung replace fragment
                 AppCompatActivity activity = (AppCompatActivity)view.getContext();
                 LevelFragment levelFragment = new LevelFragment();
+                //set bundle
                 levelFragment.setArguments(args);
 
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec, levelFragment).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, levelFragment).addToBackStack(null).commit();
 
-
-                //dung navigation component
-                //Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_levelFragment);
             }
         });
     }
@@ -85,10 +93,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         public void bind(Category item){
             binding.nameCategory.setText(item.getCategoryName());
             binding.imageCategory.setImageResource(item.getCategoryImage());
-            /*binding.getRoot().setOnClickListener(view -> {
-                //Navigation component
-                Toast.makeText(view.getContext(), "ALOALO", Toast.LENGTH_SHORT).show();
-            });*/
+
 
         }
 

@@ -14,16 +14,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.example.bap_quizzzz.databinding.ActivityMainBinding;
 import com.example.bap_quizzzz.databinding.FragmentLevelBinding;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     /// Bottom navigation + Fragment (Van 9/11/2022)
     ActivityMainBinding binding;
+    //CategoryAdapter.CategoryViewHolder categoryViewHolder;
     //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.addToBackStack(null).commit();
     }
     //
 
@@ -99,4 +103,52 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+    //Chon level
+    public void chooseLevel(View view){
+        switch (view.getId()){
+            case R.id.easybtn:
+                HistoryFragment.setLevel("easy");
+                QuestionFragment easyQuestionFragment = new QuestionFragment();
+                replaceFragment(easyQuestionFragment);
+                break;
+            case R.id.mediumbtn:
+                HistoryFragment.setLevel("medium");
+                QuestionFragment mediumQuestionFragment = new QuestionFragment();
+                replaceFragment(mediumQuestionFragment);
+                break;
+            case R.id.hardbtn:
+                HistoryFragment.setLevel("hard");
+                QuestionFragment hardQuestionFragment = new QuestionFragment();
+                replaceFragment(hardQuestionFragment);
+                break;
+        }
+    }
+
+    //tro ve home
+    public void goHome(View view){
+        if(view.getId() == R.id.go_home){
+            HomeFragment goHomeFragment = new HomeFragment();
+            replaceFragment(goHomeFragment);
+        }
+        //reset so cau tra loi dung ve 0
+        HistoryFragment.resetCorrectCount();
+    }
+
+    //chia se thanh tich
+    public void shareResult(View view) {
+        if(view.getId() == R.id.share_result){
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            String result = "Tôi đã trả lời đúng " + (HistoryFragment.getCorrectCount() + "/5") + " câu hỏi " + "cấp độ " + HistoryFragment.getLevel() + " ở chủ đề " + HistoryFragment.getTopic();
+            Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+            shareIntent.putExtra(Intent.EXTRA_TEXT, result);
+            startActivity(Intent.createChooser(shareIntent, null));
+
+        }
+    }
+
+
+
 }
