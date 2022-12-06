@@ -46,7 +46,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
-        android:src="@drawable/boy"
+        android:src="@drawable/pokeball"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/view2"
@@ -188,6 +188,32 @@
         android:src="@drawable/water2"
         app:layout_constraintEnd_toStartOf="@+id/easybtn"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="64dp"
+        android:src="@drawable/poke"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="64dp"
+        android:src="@drawable/poke"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.448" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
