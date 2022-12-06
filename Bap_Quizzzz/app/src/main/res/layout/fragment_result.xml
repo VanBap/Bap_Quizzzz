@@ -23,12 +23,12 @@
         android:id="@+id/imageView11"
         android:layout_width="190dp"
         android:layout_height="130dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginEnd="248dp"
         android:src="@drawable/stars"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -112,6 +112,7 @@
         android:onClick="goHome"
         android:paddingEnd="10dp"
         android:text="Hoàn thành"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -121,18 +122,19 @@
 
     <Button
         android:id="@+id/share_result"
-        android:layout_width="180dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_hoanthanh_share"
         android:drawableRight="@drawable/share"
         android:fontFamily="@font/baloo"
         android:onClick="shareResult"
-        android:text="Chia sẻ thành tích"
+        android:paddingEnd="10dp"
+        android:text="Chia sẻ thành tích "
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        android:paddingEnd="10dp"
         app:layout_constraintTop_toBottomOf="@+id/go_home" />
 
     <ImageView
