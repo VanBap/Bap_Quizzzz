@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     public void chooseLevel(View view){
         switch (view.getId()){
             case R.id.easybtn:
-                HistoryFragment.setLevel("easy");
+                HistoryFragment.setLevel("easy"); // lưu trạng thái level mình nhấn vào
                 QuestionFragment easyQuestionFragment = new QuestionFragment();
                 replaceFragment(easyQuestionFragment);
                 break;

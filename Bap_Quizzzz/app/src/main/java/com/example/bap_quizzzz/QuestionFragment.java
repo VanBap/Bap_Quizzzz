@@ -46,24 +46,23 @@ public class QuestionFragment extends Fragment {
 
 
         //get all questions
+        //USING IN JASON FILE
         try {
-            loadQuestion(HistoryFragment.getTopic(), HistoryFragment.getLevel());
+            loadQuestion(HistoryFragment.getTopic(), HistoryFragment.getLevel()); // load question correspond to each TOPIC and LEVEL
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         //shuffle (random) the questions
-        Collections.shuffle(questionItems);
+        Collections.shuffle(questionItems); // RANDOM
 
         //load first question
-        DisplayQuestion(currentQuestionCount);
+        DisplayQuestion(currentQuestionCount); // DISPLAY EACH QUESTION
 
         //Chon dap an xong next cau hoi
         binding.answerTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // HIEU UNG KHI BUTTON DUOC CLICK
-                // YoYo.with(Techniques.RubberBand).duration(1000).repeat(1).playOn(binding.imageView9);
 
                 //check correct answer
                 if(questionItems.get(currentQuestionCount).getAnswer1().equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
@@ -125,14 +124,14 @@ public class QuestionFragment extends Fragment {
 
     //make list with all question
     public  void loadQuestion(String topic, String difficulty) throws JSONException {
-        questionItems = new ArrayList<>();
+        questionItems = new ArrayList<>(); // GHI DỮ LIỆU TỪ FILE JSON -> MẢNG QUESTIONITEMS
         //load all question to string jsonStr
         String jsonStr = loadJSONFromAsset();
 
         //load all data into the list
         try {
             JSONObject jsonObj = new JSONObject(jsonStr);
-            String to = jsonObj.getString("math");
+
             JSONArray all = jsonObj.getJSONObject(topic).getJSONArray(difficulty);
             for(int i = 0; i < all.length(); i++){
                 JSONObject question = all.getJSONObject(i);
