@@ -12,7 +12,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="391dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/de">
 
         <TextView
             android:id="@+id/result_his"

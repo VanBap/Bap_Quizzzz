@@ -123,13 +123,14 @@ public class QuestionFragment extends Fragment {
 
     //make list with all question
     public  void loadQuestion(String topic, String difficulty) throws JSONException {
-        questionItems = new ArrayList<>();
+        questionItems = new ArrayList<>(); // GHI DỮ LIỆU TỪ FILE JSON -> MẢNG QUESTIONITEMS
         //load all question to string jsonStr
         String jsonStr = loadJSONFromAsset();
 
         //load all data into the list
         try {
             JSONObject jsonObj = new JSONObject(jsonStr);
+
             JSONArray all = jsonObj.getJSONObject(topic).getJSONArray(difficulty);
             for(int i = 0; i < all.length(); i++){
                 JSONObject question = all.getJSONObject(i);

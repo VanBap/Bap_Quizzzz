@@ -38,6 +38,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return new CategoryViewHolder(binding);
     }
 
+    /*
+   onBindViewHolder() nhan vao bien holder la mot item/view holder la mot item can duoc dien noi dung
+   bien position la vi tri cua item muon hien thi trong danh sach
+   Goi ham bind cua class VersionViewHolder vua tao de dien noi dung cho item do.
+    */
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         Category item = list.get(position);
@@ -57,11 +62,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                     HistoryFragment.setTopic("CongNghe");
                 }
 
+                // TRUYỀN TÊN CHỦ ĐỀ CHO LEVEL FRAGMENT
                 //pass object
                 Bundle args = new Bundle();
                 args.putSerializable("object_item", item);
 
                 //dung replace fragment
+                // AppCompatActivity: gọi activity
                 AppCompatActivity activity = (AppCompatActivity)view.getContext();
                 LevelFragment levelFragment = new LevelFragment();
                 //set bundle
@@ -81,7 +88,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return list.size();
     }
 
-    public class CategoryViewHolder extends RecyclerView.ViewHolder{
+    public class CategoryViewHolder extends RecyclerView.ViewHolder{ // tạo ra các viewholder
         ListItemBinding binding;
         CategoryViewHolder(ListItemBinding binding){
             super(binding.getRoot());
