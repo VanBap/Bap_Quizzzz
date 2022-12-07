@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Category implements Serializable {
+public class Category implements Serializable { // truyen bundle
     private String categoryName;
     private int categoryImage;
     private int categoryID;

@@ -31,9 +31,9 @@ public class LevelFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentLevelBinding.inflate(inflater,container,false);
         //truyen object tu home fragment sang level fragment
-        Bundle args = getArguments();
+        Bundle args = getArguments(); // NHẬN
         Category item = (Category) args.getSerializable("object_item");
-        binding.catName.setText(item.getCategoryName());
+        binding.catName.setText(item.getCategoryName()); // HIỆN THỊ TÊN CHỦ ĐỀ ĐÃ CHỌN
 
 
         return binding.getRoot();

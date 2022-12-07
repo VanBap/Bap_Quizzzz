@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()){
                 case R.id.home:
                     replaceFragment(new HomeFragment());
+                    //reset so cau tra loi dung ve 0
+                    HistoryFragment.resetCorrectCount();
                     break;
                 case R.id.history:
                     replaceFragment(new HistoryFragment());
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     public void chooseLevel(View view){
         switch (view.getId()){
             case R.id.easybtn:
-                HistoryFragment.setLevel("easy");
+                HistoryFragment.setLevel("easy"); // lưu trạng thái level mình nhấn vào
                 QuestionFragment easyQuestionFragment = new QuestionFragment();
                 replaceFragment(easyQuestionFragment);
                 break;
@@ -134,11 +136,10 @@ public class MainActivity extends AppCompatActivity {
             HomeFragment goHomeFragment = new HomeFragment();
             replaceFragment(goHomeFragment);
         }
-        //reset so cau tra loi dung ve 0
+        //store result -> history fragment
         HistoryFragment.AddHistoryList();
 
-        //history result
-        HistoryFragment.getCorrectCount();
+        //reset cau tra loi dung ve 0
         HistoryFragment.resetCorrectCount();
 
     }
