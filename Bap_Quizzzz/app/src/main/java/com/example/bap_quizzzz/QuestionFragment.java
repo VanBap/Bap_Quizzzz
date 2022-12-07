@@ -62,8 +62,6 @@ public class QuestionFragment extends Fragment {
         binding.answerTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // HIEU UNG KHI BUTTON DUOC CLICK
-                // YoYo.with(Techniques.RubberBand).duration(1000).repeat(1).playOn(binding.imageView9);
 
                 //check correct answer
                 if(questionItems.get(currentQuestionCount).getAnswer1().equals(questionItems.get(currentQuestionCount).getQuestionAnswer())){
@@ -132,7 +130,6 @@ public class QuestionFragment extends Fragment {
         //load all data into the list
         try {
             JSONObject jsonObj = new JSONObject(jsonStr);
-            String to = jsonObj.getString("math");
             JSONArray all = jsonObj.getJSONObject(topic).getJSONArray(difficulty);
             for(int i = 0; i < all.length(); i++){
                 JSONObject question = all.getJSONObject(i);

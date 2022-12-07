@@ -83,11 +83,10 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId()){
             case R.id.menuShare:
 
-                String subject = "Góp ý";
+                String subject = "Góp ý" + " từ " + getAndroidVersion();
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                //shareIntent.setData(Uri.parse("mailto:cloneson1766@gmail.com, vanbap20021599@gmail.com"));
-                //shareIntent.setData(Uri.parse("mailto:"));
+
                 shareIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"cloneson1766@gmail.com","vanbap20021599@gmail.com"});
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
 
@@ -157,6 +156,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //lay phien ban android cua user
+    public String getAndroidVersion() {
+        String release = android.os.Build.VERSION.RELEASE;  //The user-visible version string.
+        int sdkVersion = android.os.Build.VERSION.SDK_INT;  //The SDK version of the software currently running on user's hardware device.
+        return "Android SDK: API " + sdkVersion + " (Android version: " + release +")";
+    }
 
-
+    //nhan nut back tren dien thoai (co truong hop user nhan nut back de quay lai home)
+    @Override
+    public void onBackPressed() {
+        HistoryFragment.resetCorrectCount(); //reset correctCount ve 0
+        super.onBackPressed();
+    }
 }
