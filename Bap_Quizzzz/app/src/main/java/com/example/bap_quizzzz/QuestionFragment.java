@@ -177,7 +177,7 @@ public class QuestionFragment extends Fragment {
             vandeptrai = 0;
         }
         else {
-            binding.quesProgess.setProgress(progress + 20);
+            binding.quesProgess.setProgress(progress + binding.quesProgess.getMax()/5);
         }
     }
 
