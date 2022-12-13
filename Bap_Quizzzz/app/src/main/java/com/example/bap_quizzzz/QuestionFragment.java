@@ -46,18 +46,17 @@ public class QuestionFragment extends Fragment {
 
 
         //get all questions
-        //USING IN JASON FILE
         try {
-            loadQuestion(HistoryFragment.getTopic(), HistoryFragment.getLevel()); // load question correspond to each TOPIC and LEVEL
+            loadQuestion(HistoryFragment.getTopic(), HistoryFragment.getLevel());
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         //shuffle (random) the questions
-        Collections.shuffle(questionItems); // RANDOM
+        Collections.shuffle(questionItems);
 
         //load first question
-        DisplayQuestion(currentQuestionCount); // DISPLAY EACH QUESTION
+        DisplayQuestion(currentQuestionCount);
 
         //Chon dap an xong next cau hoi
         binding.answerTrueButton.setOnClickListener(new View.OnClickListener() {

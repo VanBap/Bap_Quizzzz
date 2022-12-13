@@ -42,8 +42,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="378dp"
-            android:layout_height="454dp"
+            android:layout_width="262dp"
+            android:layout_height="315dp"
             android:src="@drawable/hourglass"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
